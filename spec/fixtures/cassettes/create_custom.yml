@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.memegen.link/images/custom
+    body:
+      encoding: UTF-8
+      string: '{"template_id":"buzz","text":["me","looking into camera"],"extension":"png","layout":"default","background":"https://tschaefer.org/me.jpg"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 24 Aug 2023 11:47:37 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=r3QQ0iKAmEP3s3aKONXpI1dIcowMeYY%2FLET7dRWZKYwjE8383NNaJEzJ1ahY%2B%2FTiyyx61erwE1qGIX8M6HoFIha9lP5ZmF0pR4ldXztIDpMS7KwoeYfPEF8VFfi0Yv4iFuf3YtFBqn7dA1QlPeZn"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7fbb5c90df093637-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://api.memegen.link/images/custom/me/looking_into_camera.png?background=https://tschaefer.org/me.jpg"}'
+  recorded_at: Thu, 24 Aug 2023 11:47:37 GMT
+recorded_with: VCR 6.2.0

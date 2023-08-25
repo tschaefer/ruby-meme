@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.memegen.link/images/automatic
+    body:
+      encoding: UTF-8
+      string: '{"text":["memes, memes everywhere"]}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 24 Aug 2023 11:37:51 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=F3kIl8IMUAFeLbP04jA40pWVng3Hj1c50HSNYa6CN0%2B8deXAZSUGcPXE%2FMbtRnT%2F9PJ%2BS9x88UijpWErLSQiDdD4kCMGIYWNA2Jl8jL7fJ0LZZ1IwPFNKkvOmEXwn51%2Fdxe8N%2BcWqF%2FioE2X5O4c"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7fbb4e409e349be6-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://api.memegen.link/images/buzz/memes/memes_everywhere.webp","generator":"Pattern","confidence":0.52}'
+  recorded_at: Thu, 24 Aug 2023 11:37:52 GMT
+recorded_with: VCR 6.2.0

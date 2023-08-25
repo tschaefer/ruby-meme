@@ -1,0 +1,42 @@
+---
+require:
+  - rubocop-rspec
+  - rubocop-rake
+
+AllCops:
+  NewCops: enable
+
+Style/NegatedIf:
+  Enabled: false
+
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'lib/meme/app.rb'
+    - 'lib/meme/app/**/*.rb'
+
+Metrics/MethodLength:
+  CountAsOne:
+    - 'array'
+    - 'hash'
+    - 'heredoc'
+  Max: 50
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+
+Metrics/AbcSize:
+  Max: 20
+
+RSpec/ExampleLength:
+  CountAsOne:
+    - 'array'
+    - 'hash'
+    - 'heredoc'
+  Max: 10
+
+Style/AccessorGrouping:
+  Enabled: false
