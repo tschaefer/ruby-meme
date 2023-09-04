@@ -11,6 +11,30 @@ RSpec.describe Meme, :aggregate_failures do
     end
   end
 
+  describe 'image format' do
+    let(:track) { 'noop' }
+
+    it 'static default is png' do
+      expect(described_class.new.send(:image_format, :static)).to eq('png')
+    end
+
+    it 'animated default is gif' do
+      expect(described_class.new.send(:image_format, :animated)).to eq('gif')
+    end
+
+    it 'static is settable' do
+      described_class.image_format_static = 'jpg'
+      expect(described_class.new.send(:image_format, :static)).to eq('jpg')
+      described_class.image_format_static = nil
+    end
+
+    it 'animated is settable' do
+      described_class.image_format_animated = 'webp'
+      expect(described_class.new.send(:image_format, :animated)).to eq('webp')
+      described_class.image_format_animated = nil
+    end
+  end
+
   describe '#templates' do
     let(:track) { 'templates' }
     let(:templates) { described_class.templates }

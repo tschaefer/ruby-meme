@@ -21,6 +21,16 @@ class Meme
   headers 'Accept' => 'application/json'
   # :doc:
 
+  class << self
+    ##
+    # The static image format, defaults to +png+. <b>[class attribute]</b>
+    attr_accessor :image_format_static
+
+    ##
+    # The animated image format, defaults to +gif+. <b>[class attribute]</b>
+    attr_accessor :image_format_animated
+  end
+
   ##
   # The meme template.
   attr_accessor :template
@@ -98,7 +108,7 @@ class Meme
     query = {
       template_id: @template,
       text: self.class.send(:s_to_a, @caption),
-      extension: @animated ? 'gif' : 'png',
+      extension: @animated ? image_format(:animated) : image_format(:static),
       layout: @top ? 'top' : 'default'
     }
     query.merge!(style: @overlay) if @overlay
@@ -106,6 +116,15 @@ class Meme
     query.merge!(background:) if background
 
     query
+  end
+
+  def image_format(type)
+    case type.to_sym
+    when :static
+      self.class.image_format_static || 'png'
+    when :animated
+      self.class.image_format_animated || 'gif'
+    end
   end
 
   def self.s_to_a(string)
