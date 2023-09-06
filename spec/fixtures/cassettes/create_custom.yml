@@ -21,7 +21,7 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Thu, 24 Aug 2023 11:47:37 GMT
+      - Wed, 06 Sep 2023 07:58:19 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -35,7 +35,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=r3QQ0iKAmEP3s3aKONXpI1dIcowMeYY%2FLET7dRWZKYwjE8383NNaJEzJ1ahY%2B%2FTiyyx61erwE1qGIX8M6HoFIha9lP5ZmF0pR4ldXztIDpMS7KwoeYfPEF8VFfi0Yv4iFuf3YtFBqn7dA1QlPeZn"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FObJXkYlUSVse7jIt77Kvdh47kVXRfiqTgRbAGy8cdSSiQLdMikak0arj5hq9cK2tWU99rZsfs7A7dhY91LKdz4Tb4IwjWkfZ0zRfvXTebvWr4AhBMwTsLSWtgqoWXnzWlvjEAebqDsXb%2BXY%2B3eR"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -45,11 +45,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7fbb5c90df093637-FRA
+      - 80252a880e9a6949-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: '{"url":"https://api.memegen.link/images/custom/me/looking_into_camera.png?background=https://tschaefer.org/me.jpg"}'
-  recorded_at: Thu, 24 Aug 2023 11:47:37 GMT
+  recorded_at: Wed, 06 Sep 2023 07:58:19 GMT
 recorded_with: VCR 6.2.0

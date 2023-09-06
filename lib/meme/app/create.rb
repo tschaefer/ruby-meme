@@ -10,7 +10,7 @@ class Meme
         attr_accessor :template
       end
 
-      parameter 'PHRASE', 'the phrase to use.'
+      parameter 'CAPTION ...', 'the captions to use.', attribute_name: :caption
 
       option ['-e', '--example'], :flag, 'show example' do
         puts self.class.template['example']['url']
@@ -19,7 +19,7 @@ class Meme
 
       def execute
         exec do
-          meme = Meme.new(template: self.class.template['id'], caption: phrase)
+          meme = Meme.new(template: self.class.template['id'], caption:)
           meme.animated = animated?
           url = meme.create
           url = tinyurl(url)

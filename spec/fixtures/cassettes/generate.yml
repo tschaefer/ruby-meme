@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.memegen.link/images/automatic
     body:
       encoding: UTF-8
-      string: '{"text":["memes, memes everywhere"]}'
+      string: '{"text":["memes, memes everywhere."]}'
     headers:
       Content-Type:
       - application/json
@@ -21,7 +21,7 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Thu, 24 Aug 2023 11:37:51 GMT
+      - Wed, 06 Sep 2023 07:58:18 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -35,7 +35,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=F3kIl8IMUAFeLbP04jA40pWVng3Hj1c50HSNYa6CN0%2B8deXAZSUGcPXE%2FMbtRnT%2F9PJ%2BS9x88UijpWErLSQiDdD4kCMGIYWNA2Jl8jL7fJ0LZZ1IwPFNKkvOmEXwn51%2Fdxe8N%2BcWqF%2FioE2X5O4c"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3F5kHpubl%2FBgUP0LYvEfsTXARL1ltpjF0INonA9dtesmqPH5Oye3LydSrYbeDySR6mUC472n48rdJsP%2Fx0WEpdA25g4t9MbSO6FLByL6qVoxYCOjlANrGha41wGoABlJUtR7eKpdSjeQEPFT4g38"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -45,11 +45,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7fbb4e409e349be6-FRA
+      - 80252a371b2f18f5-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: '{"url":"https://api.memegen.link/images/buzz/memes/memes_everywhere.webp","generator":"Pattern","confidence":0.52}'
-  recorded_at: Thu, 24 Aug 2023 11:37:52 GMT
+  recorded_at: Wed, 06 Sep 2023 07:58:18 GMT
 recorded_with: VCR 6.2.0

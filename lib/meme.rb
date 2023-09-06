@@ -57,8 +57,8 @@ class Meme
 
   ##
   # Generate a meme from a phrase.
-  def self.generate(phrase: 'memes, memes everywhere.')
-    response = post('/images/automatic', body: { text: s_to_a(phrase) }.to_json)
+  def self.generate(phrase: 'memes, memes everywhere')
+    response = post('/images/automatic', body: { text: [phrase] }.to_json)
     raise 'Could not generate meme.' if !response.success?
 
     response.parsed_response['url']
@@ -76,7 +76,7 @@ class Meme
 
   ##
   # Initialize a new meme.
-  def initialize(template: 'buzz', caption: 'memes. memes everywhere')
+  def initialize(template: 'buzz', caption: ['memes', 'memes everywhere'])
     @template = template
     @caption  = caption
     @animated = false
@@ -107,7 +107,7 @@ class Meme
   def query(background = nil)
     query = {
       template_id: @template,
-      text: self.class.send(:s_to_a, @caption),
+      text: @caption,
       extension: @animated ? image_format(:animated) : image_format(:static),
       layout: @top ? 'top' : 'default'
     }
@@ -126,12 +126,4 @@ class Meme
       self.class.image_format_animated || 'gif'
     end
   end
-
-  def self.s_to_a(string)
-    return string if string.is_a?(Array)
-
-    string.split(/\.|\n/).map(&:strip)
-  end
-
-  private_class_method :s_to_a
 end

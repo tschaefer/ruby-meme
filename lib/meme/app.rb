@@ -12,11 +12,23 @@ class Meme
       option ['-m', '--man'], :flag, 'show manpage' do
         manpage = <<~MANPAGE
           Name:
-              meme - generate memes from the command line
+              meme - create and generate memes
 
           #{help}
           Description:
-              meme is a command line tool to generate memes from the command line.
+              meme is a command line tool to create and generate memes.
+
+              By providing a template name and captions, meme will create a meme with that information.
+              The available templates can be listed with the --list option.
+
+              By providing a phrase, meme will generate a suitabble meme.
+
+              The result is the url to the meme image.
+
+          Examples:
+              $ meme afraid "I don't know what this meme is for" "And at this point I'm too afraid to ask"
+              $ meme "I don't always generate memes. But when I do, I use meme"
+              $ meme sad-biden --example
 
           Authors:
               Tobias Schäfer <github@blackox.org>
@@ -48,7 +60,7 @@ class Meme
         Object.const_set(
           klass,
           Class.new(Meme::App::Create) do
-            parameter 'PHRASE', 'the phrase to use.'
+            parameter 'CAPTION ...', 'the captions to use.', attribute_name: :caption
 
             self.template = template
           end
