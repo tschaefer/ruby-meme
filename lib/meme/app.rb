@@ -5,6 +5,7 @@ require_relative 'app/generate'
 require_relative 'app/templates'
 
 class Meme
+  # :nodoc: all
   module App
     Clamp.allow_options_after_parameters = true
 
